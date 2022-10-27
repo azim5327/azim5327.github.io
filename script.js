@@ -1,38 +1,31 @@
-let counter = document.querySelector('.counter');
-const addCount = document.querySelector('#addCountBtn');
-const lowerCount = document.querySelector('#lowerCountBtn');
+const nextBtn = document.querySelector('.nextBtn');
+const prevBtn = document.querySelector('.prevBtn');
+const container = document.querySelector('.images');
 
-let count = 0;
+let counter = 0;
 
-addCount.addEventListener('click',incrementCounter);
-lowerCount.addEventListener('click',decrementCounter);
+nextBtn.addEventListener('click',nextSlide);
+prevBtn.addEventListener('click',prevSlide);
 
-function incrementCounter (){
-    count++;
-    
-    counter.innerHTML = count;
-    if(counter.innerHTML>'0'){
-        counter.style.color = '#4caf50'
-    }
-    else if(counter.innerHTML === '0'){
-        counter.style.color = 'white';
-    }
-    //counter.animate([{opacity:'0.2'},{opacity:'1.0'},
-    //{duration:1000,fill:'forward'}]);
+function nextSlide(){
+  container.animate([{opacity:'0.1'},{opacity:'1.0'}],
+  {duration:1000,fill:'forwards'});
+  if(counter === 1){
+    counter = -1;
+  }
+    counter++;
+
+    container.style.backgroundImage = `url(background-image${counter}.jpeg`
 
 }
 
-function decrementCounter (){
-    count--;
-    counter.innerHTML = count;
-    if(counter.innerHTML<'0'){
-        counter.style.color = 'red'
-
-    }
-    else if(counter.innerHTML === '0'){
-        counter.style.color = 'white';
-    }
-    counter.animate([{opacity:'0.2'},{opacity:'1.0'},
-    {duration:1000,fill:'forward'}]);
+function prevSlide(){
+  container.animate([{opacity:'0.1'},{opacity:'1.0'}],
+  {duration:1000,fill:'forwards'});
+  if(counter === 0){
+    counter = 1;
+  }
+    counter--;
 }
 
+container.style.backgroundImage = `url(background-image${counter}.jpeg`

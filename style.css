@@ -1,53 +1,31 @@
 body{
-    margin: 0;
-    padding: 0%;
-    background: url(background.jpeg) no-repeat;
-    background-size: cover;
+    min-height: 100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
-.box{
-    width: 450px;
-    background: rgba(255, 0 ,0 , 0.4);
-    padding: 40px;
+.container{
     text-align: center;
-    margin: auto;
-    margin-top: 5%;
-    color: white;
-    font-family: 'Century Gothic', sans-serif;
 }
-.box-img{
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
+
+.hexColor{
+    text-transform: capitalize;
 }
-.box h1{
-    font-size: 40px;
-    letter-spacing: 4px;
-    font-weight: 100px;
+.hex{
+    font-size: 3 rem;
 }
-.box h5{
-    font-size: 20px;
-    letter-spacing: 3px;
-    font-weight: 100;
+.hexBtn{
+    color: red;
+    border: 3px solid red;
+    border-radius: 7px;
+    background: rgba(0,0,0,0.6);
+    font-size: 1.6rem;
+    padding: 0.25 0.5rem;
+    cursor: pointer;
+    outline: none;
+    text-transform: capitalize;
 }
-.box p{
-    text-align: justify;
-}
-ul{
-    margin: 0;
-    padding: 0;
-}
-.box li{
-    display: inline-block;
-    margin: 6px;
-    list-style: none;
-}
-.box li a{
-    color: white;
-    text-decoration: none;
-    font-size: 60px;
-    transition: all ease-in-out 250ms;
-}
-.box li a:hover{
-    color: #b9b9b9;
+.hexBtn:hover{
+    background: rgb(0,0,0);
 
 }

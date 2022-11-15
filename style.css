@@ -1,31 +1,22 @@
 body{
     min-height: 100vh;
     display:flex;
-    align-items: center;
     justify-content: center;
-}
-.container{
-    text-align: center;
+    align-items: center;
 }
 
-.hexColor{
-    text-transform: capitalize;
-}
-.hex{
-    font-size: 3 rem;
-}
-.hexBtn{
-    color: red;
-    border: 3px solid red;
+.colorBtn{
+    padding: 0.25rem 0.5rem;
+    border: 3px solid #fefefe;
     border-radius: 7px;
+    color: #fefefe;
     background: rgba(0,0,0,0.6);
-    font-size: 1.6rem;
-    padding: 0.25 0.5rem;
+    font-size: 1.5rem;
+    text-transform: capitalize;
     cursor: pointer;
     outline: none;
-    text-transform: capitalize;
 }
-.hexBtn:hover{
-    background: rgb(0,0,0);
 
+.colorBtn:hover{
+    background: rgb(0,0,0);
 }
